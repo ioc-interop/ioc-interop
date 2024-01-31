@@ -1,0 +1,29 @@
+{
+    "name": "ioc-interop/ioc-interop",
+    "description": "Interoperable IOC container, factory, and registry interfaces for PHP.",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Paul M. Jones",
+            "email": "pmjones@pmjones.io"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "IocInterop\\": "./src"
+        }
+    },
+    "require-dev": {
+        "pds/composer-script-names": "^1.0",
+        "pds/skeleton": "^1.0",
+        "phpstan/phpstan": "^1.10",
+        "pmjones/php-styler": "^0.14.0"
+    },
+    "scripts": {
+        "analyze": "./vendor/bin/phpstan analyze -c phpstan.neon",
+        "check": "composer analyze && composer cs-check",
+        "cs-check": "./vendor/bin/php-styler check",
+        "cs-fix": "./vendor/bin/php-styler apply"
+    }
+}
