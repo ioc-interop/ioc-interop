@@ -1,6 +1,6 @@
 # `ioc-interop`
 
-The `ioc-interop` package defines a common set of interfaces for inversion-of-control (IOC) container functionality, including factories and registries, used by dependency injection and service locator lilbraries.
+The `ioc-interop` package defines a common set of interfaces for inversion-of-control (IOC) container functionality, including factories and registries, used by dependency injection and service locator libraries.
 
 ## Motivation
 
