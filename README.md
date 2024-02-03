@@ -19,8 +19,10 @@ The `ioc-interop` package remedies these and other issues revealed over the life
 | PSR-11                                  | `ioc-interop` |
 | --------------------------------------- | ------------- |
 | Stores any kind of value (`mixed`).     | Stores only `object` values. |
-| Entry IDs are any non-empty string.     | Entry specifications are class/interface strings. |
+| Entry IDs are any non-empty string.     | Entry specifications are strings resolvable to a class/interface strings by static analysis. `*`|
 | The `get()` method may return anything. | The `get()` method always returns a shared object instance. |
+
+`*` This allows for fully-qualified class names, as well as any arbitrary string that static analysis can map to a fully-qualified class name.
 
 Further, `ioc-interop`  composes its [_IocContainer_](./src/IocContainer.php) interface from two other interfaces:
 
